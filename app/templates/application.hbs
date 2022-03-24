@@ -1,62 +1,12 @@
-{{page-title "Housing and Marketing"}}
-
-<div class="-oneX-containercs-header-main">
-    <div class="-oneX-container cs-header-wrapper">
-        <header class="-onex noindex cs-height" id="onex-header">
-            <nav class="-oneX-container-fluid cs-height" id="cs-header">
-                <section class="-oneX-header-logo-container -oneX-header-logo-container collapsed cs-logo cs-height">
-                    <span {{action "refreshApp" }} role="button"> <img class="-onex-header-logo cs-logoHeight" id=""
-                            src="/images/SF brand internal apps.svg"
-                            alt="State Farm Insurance and Financial Services"></span>
-                </section>
-                <div class="-oneX-heading-h5 cs-contact-center-central cs-align"> Cloudwatch Dashboard </div>
-                <div class="hm-menu-bar">
-                    <ul>
-                        <span class="navlifloatright">
-
-                            <li>
-                                <a {{action "navigateToOperationalDashboard" }} id="ember191" class="hm-navdocuments_item-link {{if
-                                    isOperationalActiveclass " active" "inactive-menuBar" }}">
-                                    <span> Cloudwatch Dashboard</span>
-                                </a>
-                            </li>
-
-                            <li>
-                                <a {{action "navigateToRealTime" }} id="ember191"
-                                    class="hm-navdocuments item-link {{if isRealTimeActiveclass "
-                                    active" "inactive-menuBar" }}">
-                                    <span>CRUD API</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a {{action "navigateToHistoricalData" }} id="ember191"
-                                    class="hm-navdocuments_item-link {{if isHistoricActiveClass "
-                                    active" "inactive-menuBar" }}">
-                                    <span>Home</span>
-                                </a>
-                            </li>
-                            {{!-- <a role-"button" href={{forecastingReportURL}} id="reporting-nav"
-                                class="hm-navdocuments item-link" target=" blank">
-                                Workforce Analytics
-                            </a>
-                            </li> --}}
-                        </span>
-                    </ul>
-                </div>
-            </nav>
-        </header>
-    </div>
-    <br><br><br>
-    {{#if this.model.isAuthorized}}
+<div class="container">
+  <NavBar />
+  <div class="body">
     {{outlet}}
-    {{else}}
-    <div class="-oneX-heading--h cs-not-authorized-contact-center-central cs-align">You are not authorized</div>
-    {{/if}}
-</div>
-<footer class="-onex cs-footer-box -oneX-footer" id="cs-footer">
+  </div>
+  <footer class="-onex cs-footer-box -oneX-footer" id="cs-footer">
     <div class="-oneX-container">
-        <p class="cs-footnotes-uppercase-internal">-FOR INTERNAL STATE FARM USE ONLY -</p>
-        <p class="cs-footnotes-internal">Contains information that may not be disclosed outside State Farm without
-            authorization.</p>
+      <p class="cs-footnotes-uppercase-internal">-For Learning Purpose -</p>
+      <p class="cs-footnotes-internal">This is a test application</p>
     </div>
-</footer>
+  </footer>
+</div>

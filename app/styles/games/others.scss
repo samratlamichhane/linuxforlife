@@ -1,0 +1,29 @@
+.letters-control {
+    width: 3%;
+    text-align: center;
+}
+
+.button-check-letter {
+    background-color: floralwhite;
+    pointer-events: all;
+    font-family: sans-serif;
+    font-size: 14px;
+    width: 6%;
+}
+
+.reset-control {
+    background-color: floralwhite;
+    pointer-events: all;
+    font-family: sans-serif;
+    font-size: 14px;
+    width: 6%;
+}
+
+.button-alphabets-enter {
+    pointer-events: none;
+    margin-left: .5%;
+}
+
+.disable-check {
+    pointer-events: none;
+}

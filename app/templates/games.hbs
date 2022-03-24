@@ -1,0 +1,54 @@
+{{page-title "Games"}}
+<div class="-oneX-container">
+    <div class="-oneX-container cs-search-summary-container">
+        <table id="cs-tbl" class="-oneX-d-tablecs-search-summary-table">
+            <thead>
+                <tr class="cs-search-summary-rows">
+                    <th class="cs-search-summary-results-col1 search-summery-font">Name</th>
+                    <th class="cs-search-summary-results-colz search-summery-font">Games Played</th>
+                    <th class="cs-search-summary-results-col3 search-summery-font">Game won</th>
+                    <th class="cs-search-summary-results-col4 search-summery-font">Average Guesses for Win</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="cs-summary-row">
+                    <td class="-oneX-hyperlink cs-totalrecords search-font">
+                        <div>{{this.wordScore.name}}</div>
+                    </td>
+                    <td class="cs-queuetime search-font">
+                        <div>{{this.wordScore.gamesPlayed}}</div>
+                    </td>
+                    <td class="cs-totalcalltime search-font">
+                        <div>{{this.wordScore.wordsWon}}</div>
+                    </td>
+                    <td class="cs-wraptime search-font">
+                        <div>{{this.wordScore.rateGuess}}</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="-oneX-header cs-search-summary-header">
+        <h4 class="-oneX-heading--h4">Enter letters</h4>
+    </div>
+    {{#each this.wordList as |word index1| }}
+    <div class=" d-flex">
+        {{#each word.lettersList as |lett index|}}
+
+        <span class="queue-right">
+            <input id={{lett.id}} value={{lett.val}} type="text" maxLength="1" onkeyup={{action "capitalizeFirstLetter"
+                lett.id index index1}} disabled={{lett.disabled}} class="text-inline-box input-field letters-control" />
+        </span>{{/each}}<button id="check{{index1}}" onclick={{action "checkLetters" index1}}
+            class="button-check-letter disable-check">Check</button>
+    </div>{{/each}}
+
+    {{#each this.alphabetsList as |alp index1|}}<br>
+    <div class=" d-flex">{{#each alp as |lett index|}}<button id="enterLett{{lett}}"
+            class="letters-control button-alphabets-enter">{{lett}}</button>{{/each}}
+    </div>{{/each}}
+</div>
+<br>
+<br>
+<button id="enterLettReset" class="reset-control" onclick={{action "resetAll" }}>Reset</button>
+
+{{outlet}}

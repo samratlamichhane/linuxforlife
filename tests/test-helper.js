@@ -1,5 +1,5 @@
-import Application from 'linuxforlife/app';
-import config from 'linuxforlife/config/environment';
+import Application from 'super-rentals/app';
+import config from 'super-rentals/config/environment';
 import * as QUnit from 'qunit';
 import { setApplication } from '@ember/test-helpers';
 import { setup } from 'qunit-dom';
