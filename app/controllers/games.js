@@ -54,6 +54,7 @@ export default class GamesController extends Controller {
         }
         if (itemValue == "Backspace" && keyPr == "") {
             $("#" + (index1 + 1) + "" + index).focus();
+            // $("#" + (index1 + 1) + "" + index).select();
             this.set("wordList." + index1 + ".lettersList." + (index) + ".val", "");
             return;
         }
@@ -155,7 +156,7 @@ export default class GamesController extends Controller {
         if (this.wordSelected == wordEntered) {
             if (index1 == 0) {
                 alert("Not possible")
-            } else if (index == 1) {
+            } else if (index1 == 1) {
                 alert("Excellent!!")
             } else if (index1 == 2) {
                 alert("Great!!")

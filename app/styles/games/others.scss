@@ -1,6 +1,8 @@
 .letters-control {
-    width: 3%;
+    width: 42px;
+    line-height: 27px;
     text-align: center;
+    font-size: 20px;
 }
 
 .button-check-letter {
@@ -8,7 +10,7 @@
     pointer-events: all;
     font-family: sans-serif;
     font-size: 14px;
-    width: 6%;
+    width: 51px;
 }
 
 .reset-control {
@@ -16,14 +18,37 @@
     pointer-events: all;
     font-family: sans-serif;
     font-size: 14px;
-    width: 6%;
+    width: 51px;
 }
 
 .button-alphabets-enter {
     pointer-events: none;
-    margin-left: .5%;
+    margin-left: 5px;
+    width: 26px;
+    height: 26px;
+    text-align: center;
 }
 
 .disable-check {
     pointer-events: none;
+}
+
+.alphabet-margin {
+    margin-top: 5px;
+}
+
+.cs-search-summary-results-col1 {
+    padding-right: 15px;
+}
+
+.cs-search-summary-results-col2 {
+    padding-right: 15px;
+}
+
+.cs-search-summary-results-col3 {
+    padding-right: 15px;
+}
+
+.cs-search-summary-results-col4 {
+    padding-right: 15px;
 }

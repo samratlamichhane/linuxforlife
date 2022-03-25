@@ -5,8 +5,8 @@
             <thead>
                 <tr class="cs-search-summary-rows">
                     <th class="cs-search-summary-results-col1 search-summery-font">Name</th>
-                    <th class="cs-search-summary-results-colz search-summery-font">Games Played</th>
-                    <th class="cs-search-summary-results-col3 search-summery-font">Game won</th>
+                    <th class="cs-search-summary-results-col2 search-summery-font">Games Played</th>
+                    <th class="cs-search-summary-results-col3 search-summery-font">Games won</th>
                     <th class="cs-search-summary-results-col4 search-summery-font">Average Guesses for Win</th>
                 </tr>
             </thead>
@@ -41,10 +41,10 @@
         </span>{{/each}}<button id="check{{index1}}" onclick={{action "checkLetters" index1}}
             class="button-check-letter disable-check">Check</button>
     </div>{{/each}}
-
-    {{#each this.alphabetsList as |alp index1|}}<br>
-    <div class=" d-flex">{{#each alp as |lett index|}}<button id="enterLett{{lett}}"
-            class="letters-control button-alphabets-enter">{{lett}}</button>{{/each}}
+    <br>
+    {{#each this.alphabetsList as |alp index1|}}
+    <div class=" d-flex alphabet-margin">{{#each alp as |lett index|}}<button id="enterLett{{lett}}"
+            class="button-alphabets-enter">{{lett}}</button>{{/each}}
     </div>{{/each}}
 </div>
 <br>
